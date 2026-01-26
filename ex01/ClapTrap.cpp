@@ -29,7 +29,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap &copy)
 {
-    std::cout << "Copy Assignment Constructor called" << std::endl;
+    std::cout << "Copy Assignment Operator called" << std::endl;
     if (this != &copy)
     {
         _name = copy._name;
@@ -72,18 +72,21 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
     if (_hit > 0 && _energy > 0)
     {
-        std::cout << "ClapTrap " << _name << " repairs itself, recovering " << amount << " points" << std::endl;
+        std::cout << "ClapTrap " << _name << " repairs itself, recovering " << amount 
+        << " points" << std::endl;
         _hit += amount;
         _energy--;
     }
     else if (_hit <= 0)
-        std::cout << "ClapTrap " << _name << " cannot be repaired because it is destroyed" << std::endl;
+        std::cout << "ClapTrap " << _name << " cannot be repaired because it is destroyed"
+        << std::endl;
     else
         std::cout << "ClapTrap " << _name << " has no energy left to repair" << std::endl;
 }
 
 void ClapTrap::print()
 {
+    std::cout << "====ClapTarp Status====" << std::endl;
     std::cout << "Name " << _name << std::endl;
     std::cout << "Hit points " << _hit << std::endl;
     std::cout << "Energy points " << _energy << std::endl;

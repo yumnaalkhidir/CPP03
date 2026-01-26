@@ -2,12 +2,34 @@
 
 int main(void)
 {
-    ClapTrap claptrap1("Yumna");
-    claptrap1.attack("Maha");
-    claptrap1.beRepaired(2);
-    claptrap1.takeDamage(4);
-    claptrap1.takeDamage(4);
-    claptrap1.takeDamage(4);
-    // claptrap1.takeDamage(4);
-    claptrap1.print();
+    {
+        ClapTrap claptrap("Yumna");
+        claptrap.attack("Monster");
+        claptrap.beRepaired(2);
+        claptrap.takeDamage(4);
+        claptrap.takeDamage(4);
+        claptrap.takeDamage(4);
+        claptrap.attack("Monster");
+        claptrap.beRepaired(2);
+        claptrap.print();
+    }
+    std::cout << "-------------------------------------" << std::endl;
+    {
+        ClapTrap claptrap("Yumna");
+        for (int i = 0; i < 10; i++)
+            claptrap.beRepaired(2);
+        claptrap.takeDamage(4);
+        claptrap.attack("Monster");
+        claptrap.beRepaired(2);
+        claptrap.print();
+    }
+    std::cout << "-------------------------------------" << std::endl;
+    {
+        ClapTrap claptrap("Yumna");
+        claptrap.print();
+        ClapTrap monster(claptrap);
+        monster.print();
+        claptrap = monster;
+        claptrap.print();
+    }
 }

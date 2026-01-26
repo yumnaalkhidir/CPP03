@@ -1,10 +1,12 @@
 CXX			:= c++
 CXXFLAGS	:= -Wall -Werror -Wextra -std=c++98
-NAME		:= claptrap
+NAME		:= scavtrap
 FILES		:= ClapTrap.cpp \
+				ScavTrap.cpp \
 				main.cpp 
 OBJ			:= $(FILES:.cpp=.o)
-HEADER		:= ClapTrap.hpp
+HEADER		:= ClapTrap.hpp \
+				ScavTrap.hpp
 
 all: $(NAME)
 
