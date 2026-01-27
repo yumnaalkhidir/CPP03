@@ -4,12 +4,10 @@ int main(void)
 {
     {
         FragTrap frag("Yumna");
-        frag.print();
         frag.attack("Monster");
         frag.takeDamage(100);
         frag.beRepaired(10);
         frag.attack("Monster");
-        frag.print();
     }
     std::cout << "-------------------------------------" << std::endl;
     {
@@ -18,8 +16,6 @@ int main(void)
         bob.attack("Monster");
         FragTrap james;
         james = bob;
-        frag.print();
-        bob.print();
-        james.print();
+        james.highFiveGuys();
     }
 }

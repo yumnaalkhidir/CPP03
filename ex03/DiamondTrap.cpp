@@ -3,7 +3,6 @@
 DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap()
 {
     std::cout << "DiamondTrap Default Constructor called" << std::endl;
-
     _name = "Default";
     _hit = 100;
     _energy = 50;
@@ -33,6 +32,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& copy)
     std::cout << "DiamondTrap Copy Assignment Operator called" << std::endl;
     if (this != &copy)
     {
+        ClapTrap::operator=(copy);
         _name = copy._name;
         _hit = copy._hit;
         _energy = copy._energy;
