@@ -83,12 +83,3 @@ void ClapTrap::beRepaired(unsigned int amount)
     else
         std::cout << "ClapTrap " << _name << " has no energy left to repair" << std::endl;
 }
-
-void ClapTrap::print()
-{
-    std::cout << "====ClapTarp Status====" << std::endl;
-    std::cout << "Name " << _name << std::endl;
-    std::cout << "Hit points " << _hit << std::endl;
-    std::cout << "Energy points " << _energy << std::endl;
-    std::cout << "Damage " << _attack_damage << std::endl;
-}

@@ -3,6 +3,7 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {
     std::cout << "ScavTrap Default Constructor called" << std::endl;
+    _name = "Default";
     _hit = 100;
     _energy = 50;
     _attack_damage = 20;
@@ -61,14 +62,4 @@ void ScavTrap::guardGate()
 {
     _is_guarded = true;
     std::cout << _name << " is in Gate Keeper mode "  << std::endl;
-}
-
-void ScavTrap::print()
-{
-    std::cout << "====ScavTarp Status====" << std::endl;
-    std::cout << "Name " << _name << std::endl;
-    std::cout << "Hit points " << _hit << std::endl;
-    std::cout << "Energy points " << _energy << std::endl;
-    std::cout << "Damage " << _attack_damage << std::endl;
-    std::cout << "Gate Keeper mode: " << _is_guarded << std::endl;
 }
