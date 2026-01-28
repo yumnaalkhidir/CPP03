@@ -7,7 +7,6 @@ ScavTrap::ScavTrap() : ClapTrap()
     _hit = 100;
     _energy = 50;
     _attack_damage = 20;
-    _is_guarded = false;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -16,13 +15,11 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     _hit = 100;
     _energy = 50;
     _attack_damage = 20;
-    _is_guarded = false;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy)
 {
     std::cout << "ScavTrap Copy Constructor called" << std::endl; 
-    _is_guarded = copy._is_guarded;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
@@ -34,7 +31,6 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& copy)
         _hit = copy._hit;
         _energy = copy._energy;
         _attack_damage = copy._attack_damage;
-        _is_guarded = copy._is_guarded;   
     }
     return (*this);
 }
@@ -60,6 +56,5 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::guardGate()
 {
-    _is_guarded = true;
     std::cout << _name << " is in Gate Keeper mode "  << std::endl;
 }

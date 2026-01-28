@@ -8,6 +8,7 @@ int main(void)
         frag.takeDamage(100);
         frag.beRepaired(10);
         frag.attack("Monster");
+        frag.highFiveGuys();
     }
     std::cout << "-------------------------------------" << std::endl;
     {

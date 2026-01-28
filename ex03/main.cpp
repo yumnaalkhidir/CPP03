@@ -4,15 +4,15 @@
 
 int main()
 {
-    // {
-    //     DiamondTrap yumna;
-    //     yumna.attack("Goblin");
-    //     yumna.whoAmI();
-    //     DiamondTrap diamond("Yumna");
-    //     diamond.whoAmI();
-    //     diamond.guardGate();
-    //     diamond.highFiveGuys();
-    // }
+    {
+        DiamondTrap yumna;
+        yumna.attack("Goblin");
+        yumna.whoAmI();
+        DiamondTrap diamond("Yumna");
+        diamond.whoAmI();
+        diamond.guardGate();
+        diamond.highFiveGuys();
+    }
     std::cout << "-------------------------------------" << std::endl;
     {
         DiamondTrap original("Alpha");

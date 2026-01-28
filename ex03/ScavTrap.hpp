@@ -5,8 +5,6 @@
 
 class ScavTrap : virtual public ClapTrap
 {
-    private:
-        bool _is_guarded;
     public:
         ScavTrap();
         ScavTrap(std::string name);
